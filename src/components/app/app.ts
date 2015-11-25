@@ -10,7 +10,9 @@ import {User} from '../foo/foo';
 		<h1>My First Angular 2 App</h1>
     <input [(ng-model)]="user.firstName"/>
     <input [(ng-model)]="user.lastName"/>
-		<user [user-data]="user"></user>
+    <button type="button" (click)="clickHandler()">click me</button>
+    <hr/>
+		<user [user-data]="user" (letknow)="handler($event)"></user>
 	`,
 	directives: [RouterOutlet, User, NgModel]
 })
@@ -22,11 +24,19 @@ export class App {
     this.user = {
       firstName: 'fi',
       lastName: 'las'
-    }
+    };
 	}
 
   public user: {
     firstName:string; lastName: string;
   };
+
+  public handler($event){
+    console.log('handler1', $event);
+  }
+
+  public clickHandler(){
+    alert('I was clicked');
+  }
 }
 
