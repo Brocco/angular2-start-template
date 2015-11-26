@@ -1,6 +1,8 @@
+var webpack = require('webpack');
+
 module.exports = {
 	entry: {
-    'angular2': [
+    'vendor': [
       // Angular 2 Deps
       '@reactivex/rxjs',
       'zone.js',
@@ -28,5 +30,8 @@ module.exports = {
 		loaders: [
 			{ test: /\.ts$/, loader: 'ts-loader' }
 		]
-	}
+	},
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */'vendor', /* filename= */'vendor.js')
+  ]
 };
