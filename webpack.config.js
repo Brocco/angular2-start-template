@@ -28,7 +28,7 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{ test: /\.ts$/, loader: 'ts-loader' }
+            { test: /\.ts$/, include: /src/, loader: 'ts-loader' }
 		]
 	},
   plugins: [
