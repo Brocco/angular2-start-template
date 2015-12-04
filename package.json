@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Brocco/angular2-start-template#readme",
   "dependencies": {
     "@reactivex/rxjs": "^5.0.0-alpha.10",
-    "angular2": "2.0.0-alpha.46",
+    "angular2": "2.0.0-alpha.47",
     "reflect-metadata": "^0.1.2",
     "systemjs": "0.19.6",
     "zone.js": "^0.5.8"
