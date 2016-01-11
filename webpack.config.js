@@ -5,11 +5,10 @@ module.exports = {
     entry: {
         'vendor': [
             // Angular 2 Deps
-            '@reactivex/rxjs',
-            'zone.js',
+            'rxjs',
+            'zone.js/dist/zone',
             'reflect-metadata',
             // to ensure these modules are grouped together in one file
-            'angular2/angular2',
             'angular2/core',
             'angular2/router',
             'angular2/http'
